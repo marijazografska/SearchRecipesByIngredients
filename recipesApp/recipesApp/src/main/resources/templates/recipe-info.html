@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipe Information</title>
+</head>
+<body>
+<h1>Recipe Information</h1>
+
+<h2 th:text="${title}"></h2>
+<img th:src="${imageUrl}" alt="Recipe Image" width="300" height="200"/>
+<h3>Ingredients:</h3>
+<ul>
+  <li th:each="ingredient : ${ingredients}">
+    <span th:text="${ingredient.amount}"></span>
+    <span th:text="${ingredient.unit}"></span>
+    <span th:text="${ingredient.name}"></span>
+  </li>
+</ul>
+
+<h3>Instructions:</h3>
+<div th:utext="${instructions}"></div>
+</body>
+</html>
+

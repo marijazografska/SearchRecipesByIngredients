@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipes</title>
+</head>
+<body>
+<h1>Recipes</h1>
+<form action="/recipes" method="get">
+    <label for="ingredients">Enter ingredients (comma-separated):</label><br>
+    <input type="text" id="ingredients" name="ingredients"><br><br>
+    <button type="submit">Search Recipes</button>
+</form>
+
+<hr>
+
+<h2>Matching Recipes:</h2>
+<ul>
+
+    <li th:each="recipe : ${recipes}">
+        <a th:href="@{'/recipes/' + ${recipe.id} + '/info'}" th:text="${recipe.title}"></a>
+    </li>
+</ul>
+</body>
+</html>
