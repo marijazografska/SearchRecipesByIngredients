@@ -15,5 +15,4 @@ private final IngredientRepository ingredientRepository;
     public IngredientServiceImpl(IngredientRepository ingredientRepository) {
         this.ingredientRepository = ingredientRepository;
     }
-
 }
