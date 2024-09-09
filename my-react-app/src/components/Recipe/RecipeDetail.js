@@ -7,7 +7,7 @@ function RecipeDetail() {
     const [recipe, setRecipe] = useState(null);
 
     useEffect(() => {
-        axios.get(`/api/recipes/${id}`)
+        axios.get(`/api/recipes/${id}/info`)
             .then(response => setRecipe(response.data))
             .catch(error => console.error('Error fetching recipe details:', error));
     }, [id]);
@@ -17,7 +17,7 @@ function RecipeDetail() {
     return (
         <div>
             <h1>{recipe.title}</h1>
-            <img src={recipe.image} alt={recipe.title} />
+            <img src={recipe.imageUrl} alt={recipe.title} />
             <h2>Ingredients</h2>
             <ul>
                 {recipe.ingredients.map((ingredient, index) => (

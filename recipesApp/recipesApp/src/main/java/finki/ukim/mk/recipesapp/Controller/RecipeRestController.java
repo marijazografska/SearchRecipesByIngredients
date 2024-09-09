@@ -27,7 +27,7 @@ public class RecipeRestController {
         return ResponseEntity.ok(recipes);
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/{id}/info")
     public ResponseEntity<Map<String, Object>> getRecipeInfo(@PathVariable int id) {
         Map<String, Object> recipeInfo = recipeService.getRecipeInfo(id);
         return ResponseEntity.ok(recipeInfo);
