@@ -1,19 +1,22 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import './App.css';
+import Home from './Home';
+import RecipeList from './Search'
 import RecipeDetail from "../Recipe/RecipeDetail";
 
 const App = () => {
     return (
         <Router>
             <Routes>
-                <Route path="/" element={<RecipeList />} />
+                <Route path="/" element={<Home />} /> {/* Default home page */}
+                <Route path="/search" element={<RecipeList />} /> {/* Search page */}
                 <Route path="/recipes/:id/info" element={<RecipeDetail />} />
             </Routes>
         </Router>
     );
 };
-
+/*
 const RecipeList = () => {
     const [ingredients, setIngredients] = useState('');
     const [recipes, setRecipes] = useState([]);
@@ -78,6 +81,6 @@ const RecipeList = () => {
         </div>
     );
 };
-
+*/
 export default App;
 
