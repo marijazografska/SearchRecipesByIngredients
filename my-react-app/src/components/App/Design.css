@@ -123,8 +123,8 @@
 }
 .background-section-no-fog
 {
-    height: 100vh; /* Full viewport height */
-    background: url('https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg') no-repeat center center;
+    height: 90vh; /* Full viewport height */
+    background: url('https://i.ibb.co/jTVVMZP/Utilize-finished.jpg') no-repeat center center;
     background-size: cover; /* Ensure the image covers the entire container */
     display: flex;
     flex-direction: column; /* Allow the navbar and text to stack vertically */
@@ -139,3 +139,21 @@
     border:none;
     text-align: center;
 }
+.recipe-links{
+    font-family: 'Libre Franklin', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    color:#636363;
+    display:inline;
+    text-decoration: none;
+}
+.recipe-links:hover
+{
+    color:#5ab963;
+}
+.placeholder
+{
+    display:inline-block;
+    color: black;
+}
+
