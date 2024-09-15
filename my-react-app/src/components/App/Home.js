@@ -9,7 +9,16 @@ function HomePage() {
     const navigate = useNavigate();
 
     const handleSearchPageRedirect = () => {
-        navigate('/search'); // Redirect to the search page
+        navigate('/search');
+    };
+    const HomePageNav = ()=>
+    {
+        navigate('/');
+    };
+    const PremiumNav = () =>
+    {
+        navigate('/pricing');
+
     };
     return (
         <div>
@@ -18,20 +27,20 @@ function HomePage() {
                 {/* Full-width Navbar */}
                 <Navbar className="navbar-transparent bg-body-tertiary justify-content-between ms-1" data-bs-theme="dark">
                     <Container >
-                        <Navbar.Brand href="#home">
+                        <Navbar.Brand >
                             <img
                                 src="https://cdn.prod.website-files.com/66d47171e73000e1183f49d9/66d47171e73000e1183f4a54_logo-spoon-white.svg"
                                 width="126"
                                 height="30"
                                 className="d-inline-block align-top"
                                 alt="React Bootstrap logo"
+                                onClick={HomePageNav}
                             />
                         </Navbar.Brand>
                         <Nav className="justify-content-end ms-1">
-                            <Nav.Link href="#home" style={{color:"white"}}>Home</Nav.Link>
-                            <Nav.Link href="#features" style={{color:"white"}}>Features</Nav.Link>
-                            <Nav.Link href="#pricing" style={{color:"white"}}>Pricing</Nav.Link>
-                            <Button variant="outline-light" size="lg">Light</Button>{' '}
+                            <Nav.Link onClick={HomePageNav} style={{color:"white"}}>Home</Nav.Link>
+                            <Nav.Link onClick={handleSearchPageRedirect} style={{color:"white"}}>Search</Nav.Link>
+                            <Button variant="outline-light" size="lg" onClick={PremiumNav}>Premium</Button>{' '}
                         </Nav>
                     </Container>
                 </Navbar>
@@ -65,20 +74,20 @@ function HomePage() {
                         <Row>
                             <Col>
                                 <Row>
-                                    <Col sm={4}><img src="https://cdn.prod.website-files.com/66d47171e73000e1183f49d9/66d47171e73000e1183f4a6e_icon-feature-02.svg"/></Col>
-                                    <Col sm={8} className="ibm-plex-mono-regular text-start" ><p >Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></Col>
+                                    <Col sm={4} ><img src="https://i.ibb.co/ZYVMSf7/cooking.png" style={{height:"70px",width:"70px"}}/></Col>
+                                    <Col sm={8} className="ibm-plex-mono-regular text-start" ><p >Whisk together simple ingredients to create delicious meals with ease on Spoon.</p></Col>
                                 </Row>
                             </Col>
                             <Col>
                                 <Row>
-                                    <Col sm={4}><img src="https://cdn.prod.website-files.com/66d47171e73000e1183f49d9/66d47171e73000e1183f4a6e_icon-feature-02.svg"/></Col>
-                                    <Col sm={8} className="ibm-plex-mono-regular text-start" ><p className="justify-content-start ms-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></Col>
+                                    <Col sm={4}><img src="https://i.ibb.co/SXxVRBS/cooking-1.png" style={{height:"70px",width:"70px"}}/></Col>
+                                    <Col sm={8} className="ibm-plex-mono-regular text-start" ><p className="justify-content-start ms-1">Spoon serves up inspiration for recipes with easy, flavorful, and creative ideas.</p></Col>
 
                                 </Row></Col>
                             <Col>
                                 <Row>
-                                    <Col sm={4}><img src="https://cdn.prod.website-files.com/66d47171e73000e1183f49d9/66d47171e73000e1183f4a6e_icon-feature-02.svg"/></Col>
-                                    <Col sm={8} className="ibm-plex-mono-regular text-start" ><p className="justify-content-start ms-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></Col>
+                                    <Col sm={4}><img src="https://i.ibb.co/55YXJ5f/culinary.png" style={{height:"70px",width:"70px"}}/></Col>
+                                    <Col sm={8} className="ibm-plex-mono-regular text-start" ><p className="justify-content-start ms-1">Explore fresh recipes that turn everyday ingredients into culinary masterpieces.</p></Col>
                                 </Row>
                             </Col>
                         </Row>
@@ -111,11 +120,8 @@ function HomePage() {
                     </Carousel>
                 </div>
                 <div className="content-section">
-                    <p className="custom-p"><p className="custom-bold">Illud decore voluptaria has at.</p> Hinc invenire atomorum no vel. Ut vis nullam blandit neglegentur, omittam perpetua voluptatum qui eu. Iusto laoreet suscipit vis ad, ad ferri tempor duo.</p>
-                    <ButtonGroup className="buttonGroup">
-                        <Button variant="link" className="custom-link ibm-plex-mono-regular">MORE</Button>
-                        <Button variant="link" className="custom-link ibm-plex-mono-regular">ABOUT US</Button>
-                    </ButtonGroup>
+                    <p className="custom-p"><p className="custom-bold">Spoon hosts millions of recipes from cooks worldwide.</p> Find new dishes and share your culinary creations with a global community of food lovers. Discover flavors from every corner of the globe.</p>
+
                 </div>
             </div>
             <footer className="footer py-3 ">

@@ -4,6 +4,7 @@ import './App.css';
 import Home from './Home';
 import RecipeDetail from "../Recipe/RecipeDetail";
 import Search from './Search'
+import Pricing from "./Pricing";
 
 const App = () => {
     return (
@@ -12,6 +13,7 @@ const App = () => {
                 <Route path="/" element={<Home />} /> {/* Default home page */}
                 <Route path="/search" element={<Search />} /> {/* Search page */}
                 <Route path="/recipes/:id/info" element={<RecipeDetail />} />
+                <Route path="/pricing" element={<Pricing />} />
             </Routes>
         </Router>
     );

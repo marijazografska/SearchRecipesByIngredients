@@ -104,11 +104,11 @@
     text-decoration: none;
 }
 .buttonGroup{
-    margin-top: 40px;
+    padding-top: 40px;
+    margin:auto;
 }
 .footer {
     background-color: black;
-    margin-top: 20vh;
     height:40vh;
 }
 
@@ -124,7 +124,7 @@
 .background-section-no-fog
 {
     height: 90vh; /* Full viewport height */
-    background: url('https://i.ibb.co/jTVVMZP/Utilize-finished.jpg') no-repeat center center;
+    background: #5ab963 no-repeat center center;
     background-size: cover; /* Ensure the image covers the entire container */
     display: flex;
     flex-direction: column; /* Allow the navbar and text to stack vertically */
@@ -134,7 +134,7 @@
 }
 .input-field{
     width:40vw;
-    height: 40px;
+    height: 50px;
     border-radius: 20px;
     border:none;
     text-align: center;
@@ -155,5 +155,33 @@
 {
     display:inline-block;
     color: black;
+}
+.libre-franklin-semibold
+{
+    font-family: 'Libre Franklin', sans-serif;
+    font-weight: 600; /* Semi Bold */
+    display:inline;
+    size:16px;
+
+}
+.utilize-title{
+    position: absolute;
+    margin-top: 50vh;
+    color: white;
+    font-size: 55px;
+    height: 44px;
+    font-family: 'Libre Franklin', sans-serif;
+    font-weight: 900;
+    line-height: 45px;
+}
+.recipe-title
+{
+    width:40vw;
+    font-family: 'Libre Franklin', sans-serif;
+    font-weight: 600;
+    font-size: 55px;
+    line-height: 45px;
+    display:inline;
+
 }
 
