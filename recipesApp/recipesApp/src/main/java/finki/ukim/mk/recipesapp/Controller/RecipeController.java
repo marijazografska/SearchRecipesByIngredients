@@ -25,11 +25,6 @@ public class RecipeController {
         this.recipeService = recipeService;
     }
 
-//    @GetMapping("/")
-//    public String showHomePage() {
-//        return "redirect:/recipes";
-//    }
-
     @GetMapping
     public String getRecipes(@RequestParam(required = false) String ingredients,
                              Model model) {

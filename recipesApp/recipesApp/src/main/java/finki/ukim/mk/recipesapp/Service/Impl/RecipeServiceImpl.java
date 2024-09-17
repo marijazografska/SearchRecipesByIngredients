@@ -79,7 +79,6 @@ public class RecipeServiceImpl implements RecipeService {
             return Collections.singletonMap("error", "Error occurred while fetching recipe info");
         }
     }
-    //testest
     public Recipe mapToRecipeModel(LinkedHashMap<String, Object> recipeData) {
         int id = (int) recipeData.get("id");
         String title = (String) recipeData.get("title");

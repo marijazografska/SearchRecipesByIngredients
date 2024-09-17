@@ -7,9 +7,7 @@ import lombok.*;
 
 import jakarta.persistence.*;
 
-public class Ingredient {
-
-
+public class Ingredient{
     public String getName() {
         return name;
     }
@@ -44,9 +42,6 @@ public class Ingredient {
         this.unit = unit;
     }
 
-    // Getters and setters (you may need to generate them)
-
-    // toString() method to print ingredient details for debugging purposes
     @Override
     public String toString() {
         return "Ingredient{" +

@@ -4,8 +4,6 @@ import {Button, Container, Nav, Navbar,Col,Row, Card, CardImg} from "react-boots
 import './Design.css';
 import RecipeDetail from "../Recipe/RecipeDetail";
 
-
-
 const Search = () => {
     const [ingredients, setIngredients] = useState('');
     const [recipes, setRecipes] = useState([]);
@@ -15,8 +13,6 @@ const Search = () => {
 
     const fetchRecipes = () => {
         setLoading(true);
-
-
         fetch(`/api/recipes?ingredients=${ingredients}`)
             .then(response => {
                 if (!response.ok) {
@@ -58,35 +54,34 @@ const Search = () => {
     return (
         <div>
             <div className="background-section-no-fog" >
-            {/* Full-width Navbar */}
             <Navbar className="navbar-transparent bg-body-tertiary justify-content-between ms-1" data-bs-theme="dark">
                 <Container >
                     <Navbar.Brand onClick={HomePageNav}>
                         <img
                             src="https://cdn.prod.website-files.com/66d47171e73000e1183f49d9/66d47171e73000e1183f4a54_logo-spoon-white.svg"
-                            width="126"
-                            height="30"
+                            width="146"
+                            height="36"
                             className="d-inline-block align-top"
                             alt="React Bootstrap logo"
                         />
                     </Navbar.Brand>
                     <Nav className="justify-content-end ms-1">
-                        <Nav className="justify-content-end ms-1">
-                            <Nav.Link onClick={HomePageNav} style={{color:"white"}}>Home</Nav.Link>
-                            <Nav.Link onClick={handleSearchPageRedirect} style={{color:"white"}}>Search</Nav.Link>
-                            <Button variant="outline-light" size="lg" onClick={PremiumNav}>Premium</Button>{' '}
-                        </Nav>
+                        <Nav.Link onClick={HomePageNav} style={{color:"white"}} className="navlink">Home</Nav.Link>
+                        <Nav.Link onClick={handleSearchPageRedirect} style={{color:"white"}} className="navlink">Search</Nav.Link>
+                        <Nav.Link onClick={handleSearchPageRedirect} style={{color:"white"}} className="navlink">About us</Nav.Link>
+                        <Nav.Link onClick={handleSearchPageRedirect} style={{color:"white"}} className="navlink">Contact</Nav.Link>
+                        <Button variant="outline-light" size="lg" onClick={PremiumNav}>Premium</Button>{' '}
                     </Nav>
                 </Container>
             </Navbar>
             <div className="overlay-text" style={{
-                backgroundColor: '#5ab963', // Green background
-                height: '100vh', // Full viewport height
+                backgroundColor: '#5ab963',
+                height: '75vh',
                 display: 'flex',
                 flexDirection: 'column',
                 alignItems: 'center',
                 justifyContent: 'center',
-                position: 'relative', // To allow absolute positioning for the title
+                position: 'relative',
                 textAlign: 'center',
             }}>
                 <input
@@ -98,7 +93,7 @@ const Search = () => {
                 />
                 <br/>
                 <br/>
-                <Button variant="dark" size="lg" onClick={handleSearchClick}>Search</Button>{' '}
+                <Button variant="dark" size="lg" onClick={handleSearchClick} className="search-button">Search</Button>{' '}
                 <h1 className="utilize-title libre-franklin-semibold">UTILIZE YOUR <br/>KITCHEN <br/>PANTRY</h1>
 
             </div>
@@ -205,7 +200,7 @@ const Search = () => {
                             </div>
                         </Col>
                         <Col>
-                            <Navbar>
+                            <Navbar className="footer1">
                                 <Container>
                                     <Nav>
                                         <Nav.Link href="#deets" className="ms-3" style={{color:"white"}}>Featured</Nav.Link>

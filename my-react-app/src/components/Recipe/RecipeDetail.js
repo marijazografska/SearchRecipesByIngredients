@@ -39,21 +39,23 @@ function RecipeDetail() {
                         <Navbar.Brand onClick={HomePageNav}>
                             <img
                                 src="https://cdn.prod.website-files.com/66d47171e73000e1183f49d9/66d47171e73000e1183f4a54_logo-spoon-white.svg"
-                                width="126"
-                                height="30"
+                                width="146"
+                                height="36"
                                 className="d-inline-block align-top"
                                 alt="React Bootstrap logo"
                             />
                         </Navbar.Brand>
                         <Nav className="justify-content-end ms-1">
-                            <Nav.Link onClick={HomePageNav} style={{color:"white"}}>Home</Nav.Link>
-                            <Nav.Link onClick={handleSearchPageRedirect} style={{color:"white"}}>Search</Nav.Link>
+                            <Nav.Link onClick={HomePageNav} style={{color:"white"}} className="navlink">Home</Nav.Link>
+                            <Nav.Link onClick={handleSearchPageRedirect} style={{color:"white"}} className="navlink">Search</Nav.Link>
+                            <Nav.Link onClick={handleSearchPageRedirect} style={{color:"white"}} className="navlink">About us</Nav.Link>
+                            <Nav.Link onClick={handleSearchPageRedirect} style={{color:"white"}} className="navlink">Contact</Nav.Link>
                             <Button variant="outline-light" size="lg" onClick={PremiumNav}>Premium</Button>{' '}
                         </Nav>
                     </Container>
                 </Navbar>
-                <div className="overlay-text recipe-title " style={{textAlign:"left", marginBottom:"0", marginLeft:"20px"}}>
-                    <h1><b>{recipe.title}</b></h1>
+                <div className="overlay-text recipe-title" style={{textAlign:"left", marginBottom:"0", marginLeft:"20px"}}>
+                    <h1 className="recipe-title1"><b>{recipe.title}</b></h1>
                 </div>
             </div>
 
@@ -72,7 +74,7 @@ function RecipeDetail() {
                             <Card  className="h-100 w-100">
                                 <Card.Header><h2 className="libre-franklin-24" style={{fontSize:"22px"}}>Ingredients</h2></Card.Header>
                                 <Card.Body>
-                                    <Card.Text >
+                                    <Card.Text className="ingredients-text">
                                         <ul className="libre-franklin-light " style={{fontSize:"20px", color:"#636363", listStyle:"none"}}>
                                             {recipe.ingredients.map((ingredient, index) => (
                                                 <li key={index}>{ingredient.name} - {ingredient.amount} {ingredient.unit}</li>
@@ -91,7 +93,7 @@ function RecipeDetail() {
                 <div className="text-start container">
             <h2 className="libre-franklin-24">Instructions</h2>
                 <br/>
-            <p className="libre-franklin-light " style={{lineHeight:"45px"}}>{recipe.instructions}</p>
+            <p className="libre-franklin-light" style={{lineHeight:"45px"}}>{recipe.instructions}</p>
                 </div>
             </div>
             <div className="content-section" style={{marginTop:"0"}}>
@@ -99,8 +101,9 @@ function RecipeDetail() {
                    <Container>
                        <Row>
                            <Col><Card border="success">
-                               <Card.Img variant="top" src="https://i.guim.co.uk/img/media/7d28c0ed6e54b7cc95e3ba05699adf519ae4f270/81_196_1882_1130/master/1882.jpg?width=465&dpr=1&s=none" />
-                               <Card.Body >
+                               <Card.Img variant="top" className="cardimg"
+                                         src="https://i.guim.co.uk/img/media/7d28c0ed6e54b7cc95e3ba05699adf519ae4f270/81_196_1882_1130/master/1882.jpg?width=465&dpr=1&s=none" />
+                               <Card.Body className="cardbody">
                                    <Card.Title>Chef Henry Golding</Card.Title>
                                    <Card.Subtitle>Four Seasons Hotel, London</Card.Subtitle>
                                    <Card.Text style={{marginTop:"20px"}}>
@@ -112,8 +115,9 @@ function RecipeDetail() {
                                </Card.Footer>
                            </Card></Col>
                            <Col><Card border="success">
-                               <Card.Img variant="top" src="https://th.bing.com/th/id/OIP.HDjTvW-kC7BoJK2fGxPYDwHaE7?w=280&h=187&c=7&r=0&o=5&dpr=1.3&pid=1.7" />
-                               <Card.Body >
+                               <Card.Img variant="top" className="cardimg"
+                                         src="https://th.bing.com/th/id/OIP.HDjTvW-kC7BoJK2fGxPYDwHaE7?w=280&h=187&c=7&r=0&o=5&dpr=1.3&pid=1.7" />
+                               <Card.Body className="cardbody">
                                    <Card.Title>Chef Denzel Jackson</Card.Title>
                                    <Card.Subtitle>Nobu Restaurant, Los Angeles</Card.Subtitle>
                                    <Card.Text style={{marginTop:"20px"}}>
@@ -125,8 +129,9 @@ function RecipeDetail() {
                                </Card.Footer>
                            </Card></Col>
                            <Col><Card border="success">
-                               <Card.Img variant="top" src="https://th.bing.com/th/id/OIP.f8zmzK9AWRd99IHnTHyECwHaE8?w=269&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" />
-                               <Card.Body >
+                               <Card.Img variant="top" className="cardimg"
+                                         src="https://th.bing.com/th/id/OIP.f8zmzK9AWRd99IHnTHyECwHaE8?w=269&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" />
+                               <Card.Body className="cardbody">
                                    <Card.Title>Chef Mao Wang</Card.Title>
                                    <Card.Subtitle>TRB Hutong, Bejing</Card.Subtitle>
                                    <Card.Text style={{marginTop:"20px"}}>
@@ -138,8 +143,9 @@ function RecipeDetail() {
                                </Card.Footer>
                            </Card></Col>
                            <Col><Card border="success">
-                               <Card.Img variant="top" src="https://th.bing.com/th/id/OIP.WBP-2lZcft0rU2SVQFSiBgHaE8?w=291&h=194&c=7&r=0&o=5&dpr=1.3&pid=1.7" />
-                               <Card.Body >
+                               <Card.Img variant="top" className="cardimg"
+                                         src="https://th.bing.com/th/id/OIP.WBP-2lZcft0rU2SVQFSiBgHaE8?w=291&h=194&c=7&r=0&o=5&dpr=1.3&pid=1.7" />
+                               <Card.Body className="cardbody">
                                    <Card.Title>Chef Heike Schutz</Card.Title>
                                    <Card.Subtitle>A Mano, Berlin</Card.Subtitle>
                                    <Card.Text style={{marginTop:"20px"}}>
@@ -172,7 +178,7 @@ function RecipeDetail() {
                             </div>
                         </Col>
                         <Col>
-                            <Navbar>
+                            <Navbar className="footer1">
                                 <Container>
                                     <Nav>
                                         <Nav.Link href="#deets" className="ms-3" style={{color:"white"}}>Featured</Nav.Link>

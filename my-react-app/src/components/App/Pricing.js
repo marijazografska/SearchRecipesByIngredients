@@ -23,14 +23,13 @@ function Pricing() {
     return (
         <div>
             <div className="background-section-no-fog" style={{height:"45vh"}}>
-                {/* Full-width Navbar */}
                 <Navbar className="navbar-transparent bg-body-tertiary justify-content-between ms-1" data-bs-theme="dark">
                     <Container >
                         <Navbar.Brand href="#home">
                             <img
                                 src="https://cdn.prod.website-files.com/66d47171e73000e1183f49d9/66d47171e73000e1183f4a54_logo-spoon-white.svg"
-                                width="126"
-                                height="30"
+                                width="146"
+                                height="36"
                                 className="d-inline-block align-top"
                                 alt="React Bootstrap logo"
                                 onClick={HomePageNav}
@@ -38,8 +37,10 @@ function Pricing() {
                         </Navbar.Brand>
                         <Nav className="justify-content-end ms-1">
                             <Nav className="justify-content-end ms-1">
-                                <Nav.Link onClick={HomePageNav} style={{color:"white"}}>Home</Nav.Link>
-                                <Nav.Link onClick={handleSearchPageRedirect} style={{color:"white"}}>Search</Nav.Link>
+                                <Nav.Link onClick={HomePageNav} style={{color:"white"}} className="navlink">Home</Nav.Link>
+                                <Nav.Link onClick={handleSearchPageRedirect} style={{color:"white"}} className="navlink">Search</Nav.Link>
+                                <Nav.Link onClick={handleSearchPageRedirect} style={{color:"white"}} className="navlink">About us</Nav.Link>
+                                <Nav.Link onClick={handleSearchPageRedirect} style={{color:"white"}} className="navlink">Contact</Nav.Link>
                                 <Button variant="outline-light" size="lg" onClick={PremiumNav}>Premium</Button>{' '}
                             </Nav>
                         </Nav>
@@ -124,7 +125,7 @@ function Pricing() {
                                 </div>
                             </Col>
                             <Col>
-                                <Navbar>
+                                <Navbar className="footer1">
                                     <Container>
                                         <Nav>
                                             <Nav.Link href="#deets" className="ms-3" style={{color:"white"}}>Featured</Nav.Link>

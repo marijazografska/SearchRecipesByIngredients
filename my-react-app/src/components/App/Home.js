@@ -1,7 +1,7 @@
 import React from 'react';
 import { Navbar, Nav, Button, Container, Row, Col, ButtonGroup } from 'react-bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
-import './Design.css'; // Import your custom CSS
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './Design.css';
 import Carousel from 'react-bootstrap/Carousel'
 import { useNavigate } from 'react-router-dom';
 
@@ -22,24 +22,24 @@ function HomePage() {
     };
     return (
         <div>
-            {/* Background Section */}
             <div className="background-section" >
-                {/* Full-width Navbar */}
                 <Navbar className="navbar-transparent bg-body-tertiary justify-content-between ms-1" data-bs-theme="dark">
                     <Container >
                         <Navbar.Brand >
                             <img
                                 src="https://cdn.prod.website-files.com/66d47171e73000e1183f49d9/66d47171e73000e1183f4a54_logo-spoon-white.svg"
-                                width="126"
-                                height="30"
+                                width="146"
+                                height="36"
                                 className="d-inline-block align-top"
                                 alt="React Bootstrap logo"
                                 onClick={HomePageNav}
                             />
                         </Navbar.Brand>
                         <Nav className="justify-content-end ms-1">
-                            <Nav.Link onClick={HomePageNav} style={{color:"white"}}>Home</Nav.Link>
-                            <Nav.Link onClick={handleSearchPageRedirect} style={{color:"white"}}>Search</Nav.Link>
+                            <Nav.Link onClick={HomePageNav} style={{color:"white"}} className="navlink">Home</Nav.Link>
+                            <Nav.Link onClick={handleSearchPageRedirect} style={{color:"white"}} className="navlink">Search</Nav.Link>
+                            <Nav.Link onClick={handleSearchPageRedirect} style={{color:"white"}} className="navlink">About us</Nav.Link>
+                            <Nav.Link onClick={handleSearchPageRedirect} style={{color:"white"}} className="navlink">Contact</Nav.Link>
                             <Button variant="outline-light" size="lg" onClick={PremiumNav}>Premium</Button>{' '}
                         </Nav>
                     </Container>
@@ -50,23 +50,21 @@ function HomePage() {
                 <div className="overlay-text">
                     <h1 className="display-4 font-h1">Cook with What You Have!</h1>
                     <p className="lead ibm-plex-mono-regular">Discover recipes that match your ingredients.</p>
-                    <Button variant="success" size="lg" onClick={handleSearchPageRedirect}>Get started</Button>{' '}
+                    <Button variant="success" size="lg" onClick={handleSearchPageRedirect} className="button1">Get started</Button>{' '}
 
                 </div>
             </div>
 
-            {/* Content Section */}
             <div className="content-section">
                 <div className="text-start container">
                     <Container >
                         <Row>
                             <Col>
-                                <p className="libre-franklin-24">Unlock Your Pantry's potential:</p> <p className="libre-franklin-light">An innovative recipe app that generates personalized recipes based on the ingredients that you have at home.</p>
+                                <p className="libre-franklin-24">Unlock Your Pantry's potential:</p> <p className="lib-frank-lig ">An innovative recipe app that generates personalized recipes based on the ingredients that you have at home.</p>
                             </Col>
                             <Col></Col>
                         </Row>
                     </Container>
-                    {/* Add more content here */}
 
                 </div>
                 <div className="content-section">
@@ -140,7 +138,7 @@ function HomePage() {
                             </div>
                         </Col>
                         <Col>
-                            <Navbar>
+                            <Navbar className="footer1">
                                 <Container>
                                     <Nav>
                                         <Nav.Link href="#deets" className="ms-3" style={{color:"white"}}>Featured</Nav.Link>
